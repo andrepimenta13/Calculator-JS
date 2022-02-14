@@ -71,7 +71,6 @@ class Calculator {
         this.currentOperand = result;
         this.operation = undefined;
         this.previousOperand = '';
-
     }
 
     chooseOperation(operation) {
@@ -92,7 +91,6 @@ class Calculator {
         if (this.currentOperand.includes('.') && number === '.') return;
 
         this.currentOperand = `${this.currentOperand}${number.toString()}`
-
     }
 
     clear() {
@@ -104,7 +102,6 @@ class Calculator {
     updateDisplay() {
         this.previousOperandTextElement.innerText = `${this.formatDisplayNumber(this.previousOperand)} ${this.operation || ''}`;
         this.currentOperandTextElement.innerText = this.formatDisplayNumber(this.currentOperand);
-
     }
 }
 
